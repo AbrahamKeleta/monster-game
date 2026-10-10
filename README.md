@@ -1,62 +1,81 @@
-# 👹 Monster Battle — Flask Classroom Game
 
-A beginner-friendly web version of Monster Battle. Practice Python variables, lists, loops, conditions, `random.randint()`, HTML, and Flask routes.
+# 👹 Monster Battle
 
-## Get started
+Welcome to Monster Battle! In this project, you'll use Python, Flask, and HTML to build a simple browser game.
 
-1. Clone the repository (replace the URL with your GitHub repository):
+## 🚀 Getting Started
 
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/monster-battle.git
-   cd monster-battle
-   ```
+### Step 1: Clone the Project
 
-2. Create and activate a virtual environment (recommended):
+Open your terminal and run:
 
-   **macOS / Linux**
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
+```bash
+git clone https://github.com/abrahamkeleta/monster-battle.git
+```
 
-   **Windows PowerShell**
-   ```powershell
-   py -m venv .venv
-   .venv\Scripts\Activate.ps1
-   ```
+### Step 2: Open the Project
 
-3. Install Flask:
+```bash
+cd monster-battle
+```
 
-   ```bash
-   python -m pip install -r requirements.txt
-   ```
+### Step 3: Install Flask
 
-4. Start the game:
+```bash
+pip install -r requirements.txt
+```
 
-   ```bash
-   python app.py
-   ```
+### Step 4: Run the Game
 
-5. Open **http://127.0.0.1:5000** in your browser.
+```bash
+python app.py
+```
 
-## How to play
+### Step 5: Play!
 
-- The monster starts with 100 HP.
-- Choose Punch, Kick, or Fireball.
-- Each attack deals random damage from 0 to 100.
-- Defeat the monster and click Restart to play again.
+Open your browser and visit:
 
-## Student challenges
+http://127.0.0.1:5000
 
-1. Change the monster emoji and attack names.
-2. Give each attack a different damage range.
-3. Add player health and monster counterattacks.
-4. Add a second monster after winning.
+## 🎮 How to Play
 
-## Project files
+1. The monster starts with 100 HP.
+2. Choose an attack: Punch, Kick, or Fireball.
+3. Each attack deals random damage.
+4. Keep attacking until the monster reaches 0 HP.
+5. Defeat the monster to win!
 
-- `app.py`: Python game logic and Flask route.
-- `templates/index.html`: HTML page, buttons, and Jinja loops.
-- `requirements.txt`: Python dependencies.
+## 🧠 What You'll Practice
 
-**Teacher note:** Flask's `session` remembers health across clicks. The default secret key is only for local classroom development. For deployment, set a strong private `SECRET_KEY` environment variable and turn off debug mode.
+- Variables
+- Lists
+- Loops
+- If/Else Conditions
+- Random Numbers
+- HTML
+- Flask
+
+## 🏆 Your Challenges
+
+Once your game is working, try these:
+
+**Level 1 — Easy**
+- Change the monster's name and emoji.
+- Add a new attack.
+- Change the monster's starting health.
+
+**Level 2 — Medium**
+- Give each attack a different damage range.
+- Change the background color and button styles.
+- Add a message when an attack deals more than 50 damage.
+
+**Level 3 — Hard**
+- Give the player 100 HP.
+- Make the monster attack back.
+- Add a second monster after defeating the first.
+
+## 🎯 Your Goal
+
+Make Monster Battle your own!
+
+Experiment with the Python code, customize the HTML, and create a game that is unique to you.
