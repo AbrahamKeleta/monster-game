@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Battle</title>
+    <style>
+        body { background: #172033; color: white; text-align: center; font-family: Arial, sans-serif; padding: 35px 12px; }
+        .monster { font-size: 90px; }
+        .health-bar { max-width: 360px; margin: 12px auto 24px; background: #465168; height: 18px; border-radius: 12px; overflow: hidden; }
+        .health-fill { background: #39b980; height: 100%; width: var(--health); transition: width .25s; }
+        button { padding: 14px 20px; margin: 7px; font-size: 17px; cursor: pointer; border-radius: 10px; border: none; }
+        .attack-form { display: inline-block; }
+        .restart { background: #e0ba70; }
+    </style>
+</head>
+<body>
+    <h1>⚔️ Monster Battle</h1>
+    <div class="monster" aria-label="Monster">👹</div>
+    <h2>Monster HP: {{ health }} / 100</h2>
+    <div class="health-bar" role="progressbar" aria-label="Monster health" aria-valuenow="{{ health }}" aria-valuemin="0" aria-valuemax="100">
+        <div class="health-fill" style="--health: {{ health }}%;"></div>
+    </div>
+    <p>{{ message }}</p>
+    {% if health > 0 %}
+        <h3>Choose Your Attack</h3>
+        {% for attack in attacks %}
+            <form class="attack-form" method="POST">
+                <button type="submit" name="attack" value="{{ attack }}">{{ attack }}</button>
+            </form>
+        {% endfor %}
+    {% else %}
+        <h1>🏆 YOU WIN!</h1>
+    {% endif %}
+    <form method="POST">
+        <button class="restart" type="submit" name="attack" value="Restart">🔄 Restart Game</button>
+    </form>
+</body>
+</html>
